@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import ProductCategory from "./components/ProductCategory";
 import ProductDetails from "./components/ProductDetails";
 import Registrations from "./components/Registrations";
+import UserProfile from "./components/UserProfile";
 
 
 
@@ -22,6 +23,7 @@ function App() {
       <Route exact path="/login/" component={Login}/>
       <Route exact path="/registration/" component={Registrations}/>
       <Route exact path="/cart/" component={Cart}/>
+      <Route exact path="/myprofile/" component ={UserProfile}/>
     </Switch>
     </BrowserRouter>
   );

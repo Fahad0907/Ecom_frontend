@@ -73,7 +73,7 @@ const Navbar = () => {
                     
                     </li>
                     <li class="nav-item">
-                        <Link class="nav-link" href="">My profile</Link>
+                        <Link class="nav-link" to="/myprofile/">My profile</Link>
                     </li>
                 
                 <li class="nav-item">

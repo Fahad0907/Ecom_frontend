@@ -19,8 +19,8 @@ const Cart = () => {
         }).then(response=>{
             
             
+            window.location.href = '/cart/'
             console.log(response.data)
-            
         }).catch(_ =>{
             alert('something wrong')
         })
@@ -30,7 +30,7 @@ const Cart = () => {
 
     const incrementQuantity =async(id)=>{
         await   axios({
-            method : 'post',
+            method : 'put',
             url : 'http://127.0.0.1:8000/plus/',
             headers :  {Authorization : `token ${window.localStorage.getItem('token')}`},
             data :{
@@ -38,8 +38,8 @@ const Cart = () => {
             }
         }).then(response=>{
             
-            
             window.location.href = '/cart/'
+            
             
         }).catch(_ =>{
             alert('something wrong')
