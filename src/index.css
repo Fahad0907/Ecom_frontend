@@ -1,13 +1,100 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  margin :0;
+  padding : 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.productTitle{
+  color : #555;
+  margin-top:30px;
+}
+.price{
+  color: #FE980F;
+  font-size : 26px;
+  font-weight : bold;
+  padding-top: 20px;
+}
+
+.productDetailsInput{
+  border : 1px solid #ccc;
+  font-weight : bold;
+  height : 33px;
+  text-align :center;
+  
+  width:40px;
+}
+.cart{
+  background : #FE980F;
+  color : #FFFFFF;
+  margin-top:8px; margin-left:0px;
+
+}
+
+.mainImage{
+  height:500px; 
+  width: 500px; 
+ 
+  margin-top: 30px;
+}
+.oneimage{
+  height:100px; width: 100px;
+}
+.line{
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+.label{
+  font-weight: bold; margin-left: 20px;
+}
+.labelq{
+  font-weight: bold; margin-left:20px;
+}
+.loginSubmit{
+  width:100%; background-color:  #546BF9; 
+  Color: white;
+   padding-top:5px; 
+   padding-bottom:5px;
+   border-radius: 4px;
+}
+.regis{
+  margin-left:75%
+}
+.login{
+  margin-top: 20%;
+}
+.minus{
+  color:red;
+  text-decoration: none; 
+}
+.plus{
+  color:green;text-decoration: none;
+}
+.box{
+  width: 25rem;
+}
+.cash{
+  margin-left:9px;
+}
+.cpn{
+  width: 5rem; margin-left: 5px;
+}
+.amount {
+  color: blue;
+}
+
+.check {
+  margin-left: 29% ;
+  background-color: white;
+  color: blue;
+  border: 2px solid #008CBA;
+}
+.coupon{
+  background-color: white;
+  color: blue;
+  border: 2px solid #008CBA;
+}
+table img {
+  height: 50px;
+  width: 50px;
 }
