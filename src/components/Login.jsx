@@ -21,7 +21,7 @@ const Login = () => {
             
            window.localStorage.setItem("token", response.data['token'])
            window.location.href = '/'
-           
+          
             
         }).catch(_ =>{
             alert('worong username or password')

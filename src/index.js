@@ -4,11 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Popper from 'popper.js'
-
+import StateProvider from './components/StateProvider';
+import { initialstate, reducer } from './components/reducer';
 ReactDOM.render(
-  <React.StrictMode>
+  <StateProvider reducer={reducer} initialState={initialstate}>
     <App />
-  </React.StrictMode>,
+  </StateProvider>,
+  //<React.StrictMode>
+    //<App />
+  //</React.StrictMode>,
   document.getElementById('root')
 );
 

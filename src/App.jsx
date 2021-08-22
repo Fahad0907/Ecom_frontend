@@ -1,3 +1,5 @@
+import axios from "axios";
+import { useEffect } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Cart from "./components/Cart";
 import Home from "./components/Home";
@@ -6,12 +8,13 @@ import Navbar from "./components/Navbar";
 import ProductCategory from "./components/ProductCategory";
 import ProductDetails from "./components/ProductDetails";
 import Registrations from "./components/Registrations";
+import { useStateValue } from "./components/StateProvider";
 import UserProfile from "./components/UserProfile";
 
 
 
 function App() {
-
+  
 
   return (
     <BrowserRouter>
