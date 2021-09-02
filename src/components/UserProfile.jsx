@@ -98,7 +98,7 @@ const UserProfile = () => {
                                             <>
                                                 <td><Link  href="">{data?.orderId}</Link></td>
                                                 <td>{data.crated}</td>
-                                        {data?.delivere ==true?(<td class="text-primary">Delivered</td>):(<td class="text-primary">Pending</td>)}
+                                        {data?.delivere ===true?(<td class="text-primary">Delivered</td>):(<td class="text-primary">Pending</td>)}
                                             </>
                                         ):(<></>)}
                                         

@@ -106,3 +106,44 @@ table img {
 .orderId{
   text-decoration: none;
 }
+.add{
+  width: 100%;
+}
+.cat{
+  width: 100%;
+}
+.pname{
+  width: 100%;
+}
+.description{
+  width: 100%;
+}
+.aprice{
+  width: 100%;
+}
+.adiscount{
+  width: 100%;
+}
+.acolor{
+  width: 100%;
+}
+.addproduct{
+  width: 100%;
+  background-color: #008CBA;
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+.updateImage{
+  width: 50px;
+  height: 50px;
+}
+.pupdate{
+  width:100%; background-color:  #546BF9; 
+  Color: white;
+   padding-top:5px; 
+   padding-bottom:5px;
+   border-radius: 4px;
+   margin-top: 5px;
+}
