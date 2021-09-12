@@ -32,8 +32,8 @@ const Addproduct = () => {
         formField.append('price', price)
         formField.append('discountVal', discount)
         formField.append('categoryKey', category)
-        formField.append('size', sizeArray)
-        formField.append('color', color)
+        //formField.append('size', sizeArray)
+        //formField.append('color', color)
         axios({
             method : 'post',
             url : 'http://127.0.0.1:8000/addproduct/',

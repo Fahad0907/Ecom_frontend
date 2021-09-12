@@ -23,7 +23,7 @@ const UpdateProductDetails = () => {
         const getPost = async () =>{
             await axios({
                 method : 'get',
-                url : `http://127.0.0.1:8000/productDetails/${id}/`,
+                url : `http://127.0.0.1:8000/updateproduct/${id}/`,
             }).then(response=>{
                
                 //setProduct(response.data)
@@ -33,7 +33,7 @@ const UpdateProductDetails = () => {
                 setprice(response.data?.product?.price)
                 setdiscount(response.data?.product?.discountVal)
                 
-              
+              /*
                 for(let i=0; i<response.data?.Color?.length; i++)
                 {
                     if(i== response.data?.Color?.length - 1)
@@ -52,7 +52,7 @@ const UpdateProductDetails = () => {
                     
                 }
                 setsz(size)
-                
+                */
                
                 
             })
@@ -60,30 +60,26 @@ const UpdateProductDetails = () => {
         getPost()
     },[])
 
-    const updateData=()=>{
+    const updateData= async()=>{
         let formField = new FormData()
-        const sizeArray = []
-        sizeArray.push(sizeS)
-        sizeArray.push(sizeM)
-        sizeArray.push(sizeL)
-        sizeArray.push(sizeXL)
-        formField.append('id',id)
-        formField.append('productname',productName)
+        
+        formField.append('productName',productName)
         formField.append('price',price)
-        formField.append('discount',discount)
+        formField.append('discountVal',discount)
         formField.append('description',description)
-        formField.append('color',col)
-        formField.append('size',sizeArray)
-        formField.append('image',image2)
-        axios({
+        
+        if(image2 !== null){
+            formField.append('image',image2)
+        }
+        await axios({
             method : 'put',
-            url : 'http://127.0.0.1:8000/updateproduct/',
+            url : `http://127.0.0.1:8000/updateproduct/${id}/`,
             headers :  {Authorization : `token ${window.localStorage.getItem('token')}`},
             data  : formField
             
         }).then(response=>{
             
-            
+            console.log(response.data)
         })
         
 
@@ -125,21 +121,8 @@ const UpdateProductDetails = () => {
                     <br/>
                     <input onChange={(e)=> setdiscount( e.target.value)} value={discount}  class="pname" name="discount" type="text" />
                     <br/>
-                    <p>Select avilable size :</p>
-                    <p> Previously selected size for this product : {sz}</p>
-                    <input type="checkbox" onChange={(e)=> setsizeS(e.target.value)} id="S" name="size" value="S"/>
-                    <label for="s">S</label><br/>
-                    <input type="checkbox" onChange={(e)=> setsizeM(e.target.value)} id="M" value="M" name="size"/>
-                    <label for="M">M</label><br/>
-
-                    <input type="checkbox" onChange={(e)=> setsizeL(e.target.value)} id="L" value="L" name="size" />
-                    <label for="L">L</label><br/>
-                    <input type="checkbox" onChange={(e)=> setsizeXL(e.target.value)} id="XL" value="XL" name="size"/>
-                    <label for="XL">XL</label><br/>
-                    <label for="">Available Color :</label>
                     
-                    <input class="pname" name="color" type="text" value={col}/>
-                    <br/>
+                    
                     <input onClick={updateData} class ="pupdate" type="submit" value="Update" name="update"/>
                     
 
